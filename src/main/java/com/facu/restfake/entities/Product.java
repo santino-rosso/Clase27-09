@@ -18,23 +18,23 @@ import java.math.BigDecimal;
 @Setter
 public class Product  extends Base {
 
-
     @NotNull
     @Column(name = "titulo")
     private String title;
-        @NotNull
-        @Column(name = "precio_compra", precision = 10, scale = 2)
-        private BigDecimal price;
+
+    @NotNull
+    @Column(name = "precio_compra", precision = 10, scale = 2)
+    private BigDecimal price;
 
 
-        @Column(name = "description")
-        private String description;
+    @Column(name = "description")
+    private String description;
 
-        @Column(name = "categoria")
-        private String category;
+    @Column(name = "categoria")
+    private String category;
 
-        @Column(name = "url_imagen")
-        private String image;
+    @Column(name = "url_imagen")
+    private String image;
 
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
